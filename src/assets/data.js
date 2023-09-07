@@ -120,33 +120,93 @@ export const relatedProducts = [
     },
     {
         id: 2,
-        name: "Basic Tee",
+        name: "Classic Hoodie",
         href: "#",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg",
-        imageAlt: "Front of men's Basic Tee in white.",
-        price: "$35",
-        color: "Aspen White",
-    },
-    {
-        id: 2,
-        name: "Basic Tee",
-        href: "#",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg",
-        imageAlt: "Front of men's Basic Tee in white.",
-        price: "$35",
-        color: "Aspen White",
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        imageAlt: "Front of men's Classic Hoodie in gray.",
+        price: "$65",
+        color: "Gray",
     },
     {
         id: 3,
-        name: "Basic Tee",
+        name: "Crewneck Sweatshirt",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg",
+        imageAlt: "Front of men's Crewneck Sweatshirt in navy.",
+        price: "$45",
+        color: "Navy",
+    },
+    {
+        id: 4,
+        name: "Slim Fit Jeans",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
+        imageAlt: "Front of men's Slim Fit Jeans in blue.",
+        price: "$75",
+        color: "Blue",
+    },
+    {
+        id: 5,
+        name: "Classic Leather Belt",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg",
+
+        imageAlt: "Front of men's Classic Leather Belt in brown.",
+        price: "$45",
+        color: "Brown",
+    },
+    {
+        id: 6,
+        name: "Leather Wallet",
         href: "#",
         imageSrc:
             "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg",
-        imageAlt: "Front of men's Basic Tee in white.",
+        imageAlt: "Front of men's Leather Wallet in brown.",
         price: "$35",
-        color: "Aspen White",
+        color: "Brown",
     },
-    // More products...
+    {
+        id: 7,
+        name: "Leather Key Ring",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
+        imageAlt: "Front of men's Leather Key Ring in brown.",
+        price: "$15",
+        color: "Brown",
+    },
+    {
+        id: 8,
+        name: "Classic Watch",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        imageAlt: "Front of men's Classic Watch in black.",
+        price: "$125",
+        color: "Black",
+    },
+    {
+        id: 9,
+        name: "Leather Messenger Bag",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
+        imageAlt: "Front of men's Leather Messenger Bag in brown.",
+        price: "$225",
+        color: "Brown",
+    },
+    {
+        id: 10,
+        name: "Leather Duffle Bag",
+        href: "#",
+        imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        imageAlt: "Front of men's Leather Duffle Bag in brown.",
+        price: "$325",
+        color: "Brown",
+    },
 ];

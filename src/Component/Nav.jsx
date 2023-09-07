@@ -7,6 +7,9 @@ import {
     UserIcon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { relatedProducts } from "../assets/data";
+import SearchResult from "./SearchResult";
+
 const navigation = {
     categories: [
         {
@@ -209,6 +212,22 @@ function classNames(...classes) {
 function Nav() {
     const [open, setOpen] = useState(false);
 
+    // adding search bar functionality
+    const [searchResult, setSearchResult] = useState([]);
+
+    const handleSearch = (e) => {
+        const value = e.target.value;
+        if (value === "") {
+            setSearchResult([]);
+            return;
+        }
+        const result = relatedProducts.filter((product) => {
+            return product.name.toLowerCase().includes(value.toLowerCase());
+        });
+        setSearchResult(result);
+    };
+
+    // console.log(searchResult);
     return (
         <>
             {/* Mobile menu */}
@@ -415,25 +434,6 @@ function Nav() {
                                         </div>
                                     ))}
                                 </div>
-
-                                <div className="border-t border-gray-200 px-4 py-6">
-                                    <a
-                                        href="#"
-                                        className="-m-2 flex items-center p-2"
-                                    >
-                                        <img
-                                            src="https://tailwindui.com/img/flags/flag-canada.svg"
-                                            alt=""
-                                            className="block h-auto w-5 flex-shrink-0"
-                                        />
-                                        <span className="ml-3 block text-base font-medium text-gray-900">
-                                            CAD
-                                        </span>
-                                        <span className="sr-only">
-                                            , change currency
-                                        </span>
-                                    </a>
-                                </div>
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>
@@ -459,6 +459,17 @@ function Nav() {
                                         aria-hidden="true"
                                     />
                                 </button>
+                                {/* mobile */}
+                                <span className="relative md:hidden">
+                                    <input
+                                        className={
+                                            "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                        }
+                                        placeholder="Search"
+                                        onChange={handleSearch}
+                                    />
+                                    <SearchResult searchResult={searchResult} />
+                                </span>
 
                                 <a
                                     href="#"
@@ -667,9 +678,19 @@ function Nav() {
 
                             <div className="flex flex-1 items-center justify-end">
                                 {/* Search */}
+                                <span className="relative hidden md:block">
+                                    <input
+                                        className={
+                                            "hidden md:flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                        }
+                                        placeholder="Search"
+                                        onChange={handleSearch}
+                                    />
+                                    <SearchResult searchResult={searchResult} />
+                                </span>
                                 <a
                                     href="#"
-                                    className="ml-6 hidden p-2 text-gray-400 hover:text-gray-500 lg:block"
+                                    className="ml-1 hidden p-2 text-gray-400 hover:text-gray-500 lg:block"
                                 >
                                     <span className="sr-only">Search</span>
                                     <MagnifyingGlassIcon
